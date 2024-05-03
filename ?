@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedir Perdón</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #ffe6f2; /* Fondo rosa claro */
+        }
+
+        .container {
+            text-align: center;
+            background-color: #ffffff; /* Fondo blanco */
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.1); /* Sombra suave */
+        }
+
+        h1 {
+            color: #ff6699; /* Color rosa */
+            font-family: 'Comic Sans MS', cursive, sans-serif; /* Fuente linda */
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        .heart {
+            position: absolute;
+            top: -20px;
+            left: calc(50% - 18px); /* Ajustar posición horizontal del corazón */
+            font-size: 36px;
+            color: #ff6699;
+        }
+
+        img {
+            width: 200px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+        }
+
+        .buttons {
+            margin-top: 20px;
+        }
+
+        button {
+            background-color: #ff6699; /* Rosa */
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 0 10px;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #ff4d94; /* Rosa más oscuro al pasar el mouse */
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="container">
+        <h1><span class="heart">❤️</span> ¿Me perdonas? <span class="heart">❤️</span></h1>
+        <img id="imagen" src="Botas.jpeg" alt="Imagen de perdón">
+        <div class="buttons">
+            <button onclick="respuestaSi()">Sí</button>
+            <button onclick="respuestaNo()">No</button>
+        </div>
+    </div>
+
+    <script>
+        function respuestaSi() {
+            document.getElementById("imagen").src = "Si.jpeg";
+            document.getElementById("container").innerHTML = '<h1>¡Gracias! Te quiero mucho. <span class="heart">❤️</span></h1>';
+            // Aquí podrías redirigir a otra página si quieres.
+        }
+
+        function respuestaNo() {
+            document.getElementById("imagen").src = "No.jpeg";
+            document.getElementById("container").innerHTML = '<h1>Lo siento mucho. Intentaré hacerlo mejor. <span class="heart">❤️</span></h1>';
+            // Aquí podrías redirigir a otra página si quieres.
+        }
+    </script>
+</body>
+</html>
